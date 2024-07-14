@@ -15,7 +15,6 @@ export const getCategories = async () => {
 }
 
 export const getRecipies = async (filters: SearchFilter) => {
-    // API thecocktaildb.com
     const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${filters.category}&i=${filters.ingredient}`;
     const { data } = await axios(url);
 
